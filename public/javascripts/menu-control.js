@@ -173,18 +173,17 @@ function ipadFunc(){
 		}
 }
 jQuery(window).resize(function() {
- 	//var middlePoint = (parseInt(jQuery("body").css("width"))/2) - (parseInt(jQuery(currentPage).css("width"))/2) + 30 + "px"
-	//alert("tutu")
-	//jQuery(currentPage).css("left",middlePoint)
-	var stageHeight = parseInt(jQuery(window).height()) - 20 + "px";
+ 	var middlePoint = (parseInt(jQuery("body").css("width"))/2) - (parseInt(jQuery(currentPage).css("width"))/2) + 30 + "px"
+	jQuery(currentPage).css("left",middlePoint)
+	//var stageHeight = parseInt(jQuery(window).height()) - 20 + "px";
 	//jQuery('.left-side-bar').css("height",stageHeight);
 });
 
 //===============
 
 function changePage(targetPage,targetBg){
-	//var inPoint = (parseInt(jQuery("body").css("width"))/2) - (parseInt(jQuery(targetPage).css("width"))/2) - 100 + "px"
-	var inPoint = "270px"
+	var inPoint = (parseInt(jQuery("body").css("width"))/2) - (parseInt(jQuery(targetPage).css("width"))/2) + 30 + "px"
+	//var inPoint = "200px"
 	var outPoint2 =  (0 - parseInt(jQuery(targetPage).css("width"))) + "px"
 	var outPoint =  (parseInt(jQuery("body").css("width")) + parseInt(jQuery(targetPage).css("width"))) + "px"
 	//alert(inPoint);

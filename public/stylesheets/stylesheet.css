@@ -119,9 +119,9 @@
 }
 
 .menu-container {
-  position: absolute;
-  top: 160px;
-  left: 390px;
+  position: relative;
+  margin: auto;
+  margin-top: 160px;
   -moz-border-radius: 18px;
   border-radius: 15px;
   height: 36px;
@@ -311,6 +311,7 @@ td {
   display: block;
   top: 20px;
   left: 370px;
+  width: 850px;
   height: auto;
 }
 
