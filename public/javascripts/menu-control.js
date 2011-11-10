@@ -39,10 +39,40 @@ function menu_appear(menu_item,delay_count,offset){
 	);
 }
 jQuery(document).ready(function() {
+  
+  jQuery('#slider').nivoSlider(
+    {
+  						effect:'boxRainGrow', // Specify sets like: 'fold,fade,sliceDown'
+  		        slices:15, // For slice animations
+  		        boxCols: 6, // For box animations
+  		        boxRows: 4, // For box animations
+  		        animSpeed:800, // Slide transition speed
+  		        pauseTime:4000, // How long each slide will show
+  		        startSlide:0, // Set starting Slide (0 index)
+  		        directionNav:false, // Next & Prev navigation
+  		        directionNavHide:false, // Only show on hover
+  		        controlNav:false, // 1,2,3... navigation
+  		        controlNavThumbs:false, // Use thumbnails for Control Nav
+  		        controlNavThumbsFromRel:false, // Use image rel for thumbs
+  		        controlNavThumbsSearch: '.jpg', // Replace this with...
+  		        controlNavThumbsReplace: '_thumb.jpg', // ...this in thumb Image src
+  		        keyboardNav:false, // Use left & right arrows
+  		        pauseOnHover:false, // Stop animation while hovering
+  		        manualAdvance:false, // Force manual transitions
+  		        captionOpacity:0.8, // Universal caption opacity
+  		        prevText: 'Prev', // Prev directionNav text
+  		        nextText: 'Next', // Next directionNav text
+  		        beforeChange: function(){}, // Triggers before a slide transition
+  		        afterChange: function(){}, // Triggers after a slide transition
+  		        slideshowEnd: function(){}, // Triggers after all slides have been shown
+  		        lastSlide: function(){}, // Triggers when last slide is shown
+  		        afterLoad: function(){} // Triggers when slider has loaded
+  		}
+  );
 	
 	var stageHeight = parseInt(jQuery(window).height()) - 20 + "px";
 	//jQuery('.left-side-bar').css("height",stageHeight);
-	jQuery('#page1,#page2,#page3,#page4,#page5').css("display","none")
+	jQuery('#page1,#page2,#page3,#page4,#page5,#page6').css("display","none")
 
 	//jQuery(".preloader").delay(600).slideToggle(600,"swing");
 	jQuery(".bg2").css("display", "none");
@@ -57,6 +87,7 @@ jQuery(document).ready(function() {
 	menu_appear("#main-3-link",1750);
 	menu_appear("#main-4-link",2000);
 	menu_appear("#main-5-link",2250);
+	menu_appear("#main-6-link",2500);
 	changePage("#page1","bg_1.jpg");
 	//==============
 	jQuery('#main-1-link').click(function(){
@@ -73,6 +104,9 @@ jQuery(document).ready(function() {
 	});
 	jQuery('#main-5-link').click(function(){
 		changePage("#page5","bg_1.jpg");
+	});
+	jQuery('#main-6-link').click(function(){
+		changePage("#page6","bg_1.jpg");
 	});
 		// pageComeOut();
 	//=====MOUSE ENTER MENU ITEM==============
@@ -173,7 +207,7 @@ function ipadFunc(){
 		}
 }
 jQuery(window).resize(function() {
- 	var middlePoint = (parseInt(jQuery("body").css("width"))/2) - (parseInt(jQuery(currentPage).css("width"))/2) + 30 + "px"
+ 	var middlePoint = (parseInt(jQuery("body").css("width"))/2) - (parseInt(jQuery(currentPage).css("width"))/2) + "px"
 	jQuery(currentPage).css("left",middlePoint)
 	//var stageHeight = parseInt(jQuery(window).height()) - 20 + "px";
 	//jQuery('.left-side-bar').css("height",stageHeight);
@@ -182,7 +216,7 @@ jQuery(window).resize(function() {
 //===============
 
 function changePage(targetPage,targetBg){
-	var inPoint = (parseInt(jQuery("body").css("width"))/2) - (parseInt(jQuery(targetPage).css("width"))/2) + 30 + "px"
+	var inPoint = (parseInt(jQuery("body").css("width"))/2) - (parseInt(jQuery(targetPage).css("width"))/2) + "px"
 	//var inPoint = "200px"
 	var outPoint2 =  (0 - parseInt(jQuery(targetPage).css("width"))) + "px"
 	var outPoint =  (parseInt(jQuery("body").css("width")) + parseInt(jQuery(targetPage).css("width"))) + "px"
