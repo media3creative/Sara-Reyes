@@ -33,6 +33,12 @@
   //    %img{:height => "40", :src => "/images/75.gif", :width => "40"}
   .bg2
   .bg1
+  .footer
+    %object#niftyPlayer1{:align => "", :classid => "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000", :codebase => "http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0", :height => "38", :width => "165"}
+      %param{:name => "movie", :value => "niftyplayer.swf?file=music.mp3&as=1"}/
+      %param{:name => "quality", :value => "high"}/
+      %param{:name => "bgcolor", :value => "#FFFFFF"}/
+      %embed{:align => "", :bgcolor => "#FFFFFF", :height => "38", :name => "niftyPlayer1", :pluginspage => "http://www.macromedia.com/go/getflashplayer", :quality => "high", :src => "niftyplayer.swf?file=music.mp3&as=1", :type => "application/x-shockwave-flash", :width => "165"}
   .menu-container
     %ul
       %li

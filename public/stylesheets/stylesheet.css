@@ -107,13 +107,12 @@
 }
 
 .footer {
-  position: absolute;
-  height: 170px;
-  width: 400px;
-  bottom: 10px;
-  text-align: left;
-  margin-left: 0px;
-  text-align: right;
+  position: fixed;
+  background-color: black;
+  height: 35px;
+  width: 165px;
+  bottom: 0px;
+  right: 0px;
   color: #e6e6e6;
   font-size: 10px;
 }
