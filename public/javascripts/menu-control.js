@@ -42,7 +42,7 @@ jQuery(document).ready(function() {
   
   jQuery('#slider').nivoSlider(
     {
-  						effect:'boxRainGrow', // Specify sets like: 'fold,fade,sliceDown'
+  						effect:'fade', // Specify sets like: 'fold,fade,sliceDown'
   		        slices:15, // For slice animations
   		        boxCols: 6, // For box animations
   		        boxRows: 4, // For box animations
