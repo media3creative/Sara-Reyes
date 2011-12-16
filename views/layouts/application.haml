@@ -5,9 +5,7 @@
 %html{html_attrs}
   %head
     %title= @title
-    // Buggy on the iPhone4
-    // %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0", :name => "viewport"}
-    %meta{:name => "keywords", :content => "bar,restaurant,houston,texas,rice village, brunch, wine, cocktail, martini"}
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
     %link{:href => "stylesheets/stylesheet.css", :media => "all", :rel => "stylesheet", :type => "text/css"}
     %link{:href => "themes/default/default.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}
     %script{:type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"}
@@ -65,14 +63,11 @@
             %img{:alt => "", :src => "images/slideshow/2.jpg"}
             %img{:alt => "", :src => "images/slideshow/3.jpg"}
     .lower_bg
-    %h2{:style => "text-align: center;margin-bottom: 30px;"} Welcome to Sara Reyes Ministries
-    %p{:style => "font-size: 16px;"} Bienvenido!!! Gracias por visitar nuestra pagina, Es mi deseo que LA VISION, de este ministerio se haga realidad en tu vida, y verdaderamente podamos: " Impactar tu corazon, Enriquecer tu vida, transformar tu familia."
-    //column{:style =>"width: 270px;text-align: center;margin-left: 20px;"}
-    // %img{:height => "240", :src => "images/banner/box_1.png", :width => "240", :style =>"margin-left:0px;"}
-    //column{:style =>"width: 270px;text-align: center;"}
-    // %img{:height => "240", :src => "images/banner/box_2.png", :width => "240", :style =>"margin-left:0px;"}
-    //column{:style =>"width: 270px;text-align: center;"}
-    // %img{:height => "240", :src => "images/banner/box_3.png", :width => "240", :style =>"margin-left:0px;"}
+    .column{:style =>"width: 250px;"}
+      %img{:height => "344", :src => "images/banner/front_pic.png", :width => "250", :style =>"margin-left:30px;"}
+    .column{:style =>"width: 550px; position: relative; left: 20px;"}
+      %h2 Welcome to Sara Reyes Ministries
+      %p Bienvenido!!! Gracias por visitar nuestra pagina, Es mi deseo que LA VISION, de este ministerio se haga realidad en tu vida, y verdaderamente podamos: " Impactar tu corazon, Enriquecer tu vida, transformar tu familia."
   #page2
     .upper_bg
     .content
